@@ -3,7 +3,7 @@
 	Author: MiLinSoQ
 	Time: 2020-10-19
 	Title: Two Sum
-	Number: 1
+	No: 1
 */
 
 public class Solution {
