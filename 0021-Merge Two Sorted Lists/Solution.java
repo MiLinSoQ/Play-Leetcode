@@ -22,6 +22,7 @@ public class Solution {
 		
 
 		ListNode resultNode = (new Solution()).mergeTwoLists(node1, node2);
+		printList(resultNode);
 
 	}
 	
@@ -30,8 +31,6 @@ public class Solution {
 		ListNode dummyHead = new ListNode(-1);
 		ListNode cur = dummyHead;
 		while (l1 != null || l2 != null) {
-			
-			System.out.println("----");
 			
 			if (l1 == null) {
 				cur.next = l2;
@@ -48,36 +47,17 @@ public class Solution {
 			}
 			
 			if (l1.val <= l2.val) {
-				System.out.println("L1");
-				
 				cur.next = l1;
 				l1 = l1.next;
-				printList(l1);
-				printList(cur);
-				
 				cur = cur.next;
 				cur.next = null;
-				printList(dummyHead);
 			} else {
-				
-				System.out.println("L2");
-				
 				cur.next = l2;
 				l2 = l2.next;
-				
-				printList(l2);
-				printList(cur);
-				
 				cur = cur.next;
 				cur.next = null;
-				printList(dummyHead.next);
 			}
-			
-			
 		}
-		
-		// printList(dummyHead.next);
-		
         return dummyHead.next;
     }
 	
@@ -98,7 +78,7 @@ public class Solution {
 	
 	public static void printList(ListNode head) {
 		
-		if (head == null) throw new IllegalArgumentException("Print failed, head is null.");
+		// if (head == null) throw new IllegalArgumentException("Print failed, head is null.");
 		
 		ListNode cur = head;
 		while (cur != null) {
