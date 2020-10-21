@@ -13,8 +13,8 @@ public class Solution {
 	public static void main(String args[]) {
 		
 		
-		int[] arr1 = {1,2,4};
-		int[] arr2 = {1,3,4};
+		int[] arr1 = {};
+		int[] arr2 = {};
 		
 		ListNode node1 = createLinkedList(arr1);
 		ListNode node2 = createLinkedList(arr2);
@@ -34,16 +34,10 @@ public class Solution {
 			
 			if (l1 == null) {
 				cur.next = l2;
-				l2 = l2.next;
-				cur = cur.next;
-				cur.next = null;
-				continue;
+				break;
 			} else if (l2 == null) {
 				cur.next = l1;
-				l1 = l1.next;
-				cur = cur.next;
-				cur.next = null;
-				continue;
+				break;
 			}
 			
 			if (l1.val <= l2.val) {
