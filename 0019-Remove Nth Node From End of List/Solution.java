@@ -5,7 +5,19 @@
 	Title: Remove Nth Node From End of List
 	No: 19
 */
-
+/**
+	傳入一個節點頭 ListNode (head) & Integer (n)，
+	刪掉這個鏈結的倒數 n 節點。
+	
+	EX:
+			1 -> 2 -> 3 -> 4 -> 5 -> NULL
+			
+			1 -> 2 -> 3 -> 5 -> NULL
+		
+		Input: head = [1,2,3,4,5], n = 2
+		Output: [1,2,3,5]
+	
+*/
 public class Solution {
 	
 	public static void main(String args[]) {
@@ -14,12 +26,12 @@ public class Solution {
 		ListNode node = ListNode.createLinkedList(arr);
 		ListNode.printList(node);
 		
-		ListNode result = (new Solution()).removeNthFromEnd(node, -1);
+		ListNode result = (new Solution()).removeNthFromEnd(node, 2);
 		
 		ListNode.printList(result);
 	}
 	
-	// 1. 先取得整個List的長度。
+	// 1. 先取得整個 List 的長度。
 	// 2. 再利用長度反向算出要刪除的節點。
 	// 3. 執行刪除動作。
     public ListNode removeNthFromEnd(ListNode head, int n) {

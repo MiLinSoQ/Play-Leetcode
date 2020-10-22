@@ -7,6 +7,14 @@
 */
 import java.util.*;
 
+/**
+	傳入一個 Integer (x)，檢查這個值是否左右顛倒還是相等
+	
+	EX: 121	->	121  	true
+	EX: -123 -> 321		false
+	EX: 10	->	1		false
+	
+*/
 public class Solution {
 	
 	public static void main(String args[]) {

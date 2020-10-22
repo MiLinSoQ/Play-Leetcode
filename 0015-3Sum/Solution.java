@@ -7,6 +7,15 @@
 */
 import java.util.*;
 
+/**
+	傳入一個 Integers (nums)，
+	在 nums 找出三個數相加 = 0 的組合。
+	
+	EX: 
+		Input: nums = [-1,0,1,2,-1,-4]
+		Output: [[-1,-1,2],[-1,0,1]]
+
+*/
 public class Solution {
 	
 	public static void main(String args[]) {
@@ -69,9 +78,6 @@ public class Solution {
 			int rightIndex = nums.length - 1;
 			
 			while (leftIndex < rightIndex) {
-				// System.out.println("leftIndex: " + nums[leftIndex]);
-				// System.out.println("rightIndex: " + nums[rightIndex]);
-				
 				sum = nums[index] + nums[leftIndex] + nums[rightIndex];
 				
 				if (sum == 0) {

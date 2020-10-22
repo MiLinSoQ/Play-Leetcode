@@ -6,6 +6,18 @@
 	No: 2
 */
 
+/**
+	EX	
+	
+	Input: l1 = [2,4,3], l2 = [5,6,4]
+	Output: [7,0,8]
+	
+			l1:	  2 -> 4 -> 3 -> NULL
+			l2:	+ 5 -> 6 -> 4 -> NULL
+				------------------------
+				  7 -> 0 -> 8 -> NULL
+	
+*/
 class Solution { 
     
 	public static void main(String args[]) {
@@ -29,7 +41,7 @@ class Solution {
 
 		if (l1 == null || l2 == null) throw new IllegalArgumentException("Failed, la | l2 is null.");
 		
-		// 虛擬鏈結頭，方便加入新的鏈結。
+		// 虛擬頭節點，方便加入新的鏈結。
 		ListNode dummyHead = new ListNode(-1);
 		ListNode curr;
 		// 進位值

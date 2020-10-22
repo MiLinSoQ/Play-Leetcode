@@ -6,15 +6,27 @@
 	No: 21
 */
 
-
+/**
+	合併兩個已完成排序的鏈結。
+	
+	EX:
+			1 -> 2 -> 4 -> NULL
+			
+			1 -> 3 -> 4 -> NULL
+			
+		-----------------------------	
+		
+			1 -> 1 -> 2 -> 3 -> 4 -> 4 -> NULL
+	
+*/
 
 public class Solution {
 	
 	public static void main(String args[]) {
 		
 		
-		int[] arr1 = {};
-		int[] arr2 = {};
+		int[] arr1 = {1, 2, 4};
+		int[] arr2 = {1, 3, 4};
 		
 		ListNode node1 = createLinkedList(arr1);
 		ListNode node2 = createLinkedList(arr2);
