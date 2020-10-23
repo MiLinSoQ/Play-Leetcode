@@ -14,17 +14,17 @@
 		
 		1	A				E
 			
-			¡õ			¡ù
+			¡õ			¡ù	¡õ
 		
-		2	B		D
+		2	B		D		F
 	
-			¡õ	¡ù
+			¡õ	¡ù			¡õ
 			
-		3	C
+		3	C				G
 		
 		
-		Input: s = "ABCDE", numRows = 3
-		Output: "AEBDC"
+		Input: s = "ABCDEFG", numRows = 3
+		Output: "AEBDFCG"
 	
 */
 public class Solution {
@@ -35,9 +35,6 @@ public class Solution {
 		int rows = 3;
 		
 		(new Solution()).convert(s, rows);
-		
-		
-		
 	}
 	
     public String convert(String s, int numRows) {
@@ -65,9 +62,8 @@ public class Solution {
 		
 		String res = "";
 		for (int i = 0; i < tempStrings.length; i++) {
-			System.out.println("s: " + tempStrings[i]);
+			System.out.println((i + 1) + " -> " + tempStrings[i]);
 			res += tempStrings[i];
-			
 		}
 		
 		System.out.println(res);
