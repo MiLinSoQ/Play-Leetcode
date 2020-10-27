@@ -12,20 +12,21 @@
 	
 	EX: 
 		Input: root = [10,5,15,3,7,null,18], L = 7, R = 15
-		Output: 32
+		Output: 32 because 10 + 15 + 7 = 32
+		
 	
 */
 public class Solution {
 	
 	public static void main(String args[]) {
 		
-		// int[] nums = { 10, 5, 15, 3, 7, -1, 18 };
-		// int L = 7;
-		// int R = 15;
+		int[] nums = { 10, 5, 15, 3, 7, -1, 18 };
+		int L = 7;
+		int R = 15;
 		
-		int[] nums = { 10,5,15,3,7,13,18,1,-1,6 };
-		int L = 6;
-		int R = 10;
+		// int[] nums = { 10,5,15,3,7,13,18,1,-1,6 };
+		// int L = 6;
+		// int R = 10;
 		
 		TreeNode node = TreeNode.createTree(nums);
 		
@@ -48,8 +49,13 @@ public class Solution {
 			 ret += node.val;
 		 }
 		 
-		 ret = rangeSumBST(node.left, L, R, ret);
-		 ret = rangeSumBST(node.right, L, R, ret);
+		 if (node.val > L) {
+			ret = rangeSumBST(node.left, L, R, ret);
+		 }
+		 
+		 if (node.val < R) {
+			 ret = rangeSumBST(node.right, L, R, ret);
+		 }
 		 
 		 return ret;
     }
