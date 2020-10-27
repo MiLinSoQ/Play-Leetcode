@@ -1,9 +1,9 @@
 /**
-	Url: https://leetcode.com/problems/merge-two-binary-trees/
+	Url: https://leetcode.com/problems/same-tree/
 	Author: MiLinSoQ
 	Time: 2020-10-27
 	Title: Merge Two Binary Tree
-	No: 617
+	No: 100
 */
 
 /**
