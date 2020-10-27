@@ -60,7 +60,6 @@ public class Solution {
 		System.out.println("Merge: " + res.right.val);
 		
 		System.out.println("Merge: " + res.right.right.val);
-		
 	}
 	
 	public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
