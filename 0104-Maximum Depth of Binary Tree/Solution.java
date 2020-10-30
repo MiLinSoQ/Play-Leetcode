@@ -30,7 +30,6 @@ public class Solution {
 		node.right.left = new TreeNode(15);
 		node.right.right = new TreeNode(7);
 		
-		node.right.right.left = new TreeNode(8);
 		
 		int depth = (new Solution()).maxDepth(node);
 		
@@ -38,13 +37,19 @@ public class Solution {
 	}
 	
 	public int maxDepth(TreeNode root) {
-		int depth = 0;
-		maxDepth(root, depth);
-        return depth;
+        return maxDepth(root, 0, 0);
     }
 	
-	private int maxDepth(TreeNode node, int depth) {
+	private int maxDepth(TreeNode node, int curDepth, int maxDepth) {
+		if (node == null) return maxDepth;
 		
+		curDepth++;
+		
+		maxDepth = maxDepth(node.left, curDepth, maxDepth);
+		maxDepth = maxDepth(node.right, curDepth, maxDepth);
+		
+		if (curDepth > maxDepth) maxDepth = curDepth;
+		return maxDepth;
 	}
 	
 }
