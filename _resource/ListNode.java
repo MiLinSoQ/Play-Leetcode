@@ -39,5 +39,12 @@ public class ListNode {
 		System.out.println("NULL.");
 	}
 	
+	
+	public static ListNode getLast(ListNode node) {
+		if (node.next == null) return node;
+		return getLast(node.next);
+	}
+	
+	
 }
 
