@@ -9,21 +9,22 @@
 import java.util.TreeMap;
 
 /**
-	實作一個 Trie class，提供一些方法。
-	insert		-> 丟入元素。
-	seatch		-> 搜尋是否有這個元素。
-	startWith	-> 搜尋是否有包含這個元素。
+	實作一個 WordDictionary class，提供一些方法，與 Trie 類似
+	addWord		-> 丟入元素。
+	search		-> 搜尋是否有這個元素。
+	
+	search 傳入的 String 遇到，String 中有 '.' 及代表任何字母。
+	
 	
 	EX:
-		Trie trie = new Trie();
-
-		trie.insert("apple");
-		trie.search("apple");   // returns true
-		trie.search("app");     // returns false
-		trie.startsWith("app"); // returns true
-		trie.insert("app");   
-		trie.search("app");     // returns true
-	
+		WordDictionary wordDictionary = new WordDictionary();
+		wordDictionary.addWord("bad");
+		wordDictionary.addWord("dad");
+		wordDictionary.addWord("mad");
+		wordDictionary.search("pad"); 	// return False
+		wordDictionary.search("bad"); 	// return True
+		wordDictionary.search(".ad"); 	// return True
+		wordDictionary.search("b.."); 	// return True
 */
 public class Solution {
 	
