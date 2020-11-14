@@ -18,29 +18,48 @@
 public class Solution {
 	
 	public static void main(String args[]) {
-		int[] nums = {2,7,9,3,1,3};
+		int[] nums = { 1, 2, 4, 1, 7, 8, 3 };
 		
 		int result = (new Solution()).rob(nums);
 		
 		System.out.println(result);
 	}
 	
-	
-	 public int rob(int[] nums) {
-		 if (nums == null || nums.length <= 0) return 0;
+
+	public int rob(int[] nums) {
+		if (nums == null || nums.length <= 0) return 0;
+		if (nums.length == 1) return nums[0];
+		if (nums.length == 2) return (nums[0] > nums[1]) ? nums[0] : nums[1];
+
+		int[] opt = new int[nums.length];
+		opt[0] = nums[0];
+		opt[1] = (nums[0] > nums[1]) ? nums[0] : nums[1];
+
+		for (int i = 2; i < nums.length; i ++) {
+			int A = opt[i - 2] + nums[i];
+			int B = opt[i - 1];
+			opt[i] = (A > B) ? A : B;
+		}
+
+		return opt[opt.length - 1];
+	}
+
+
+	 // public int rob(int[] nums) {
+		//  if (nums == null || nums.length <= 0) return 0;
 		 
-		 int max1 = 0;
-		 int max2 = 0;
-		 for (int i = 0; i < nums.length; i++) {
-			 if ((i % 2) == 0) {
-				 max1 += nums[i];
-			 } else {
-				 max2 += nums[i];
-			 }
-		 }
+		//  int max1 = 0;
+		//  int max2 = 0;
+		//  for (int i = 0; i < nums.length; i++) {
+		// 	 if ((i % 2) == 0) {
+		// 		 max1 += nums[i];
+		// 	 } else {
+		// 		 max2 += nums[i];
+		// 	 }
+		//  }
 		 
-        return (max1 > max2 ? max1 : max2);
-    }
+  //       return (max1 > max2 ? max1 : max2);
+  //   }
 	
 	private static void printArray(int[] nums) {
 		for (int i = 0; i < nums.length; i++) {
