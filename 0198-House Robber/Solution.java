@@ -25,7 +25,8 @@ public class Solution {
 		System.out.println(result);
 	}
 	
-
+	// 利用動態規劃的方式，選出不相鄰和的最大值。 可以參考一下解說。
+	// https://www.youtube.com/watch?v=Jakbj4vaIbE&t=2s&ab_channel=%E9%BB%84%E6%B5%A9%E6%9D%B0
 	public int rob(int[] nums) {
 		if (nums == null || nums.length <= 0) return 0;
 		if (nums.length == 1) return nums[0];
