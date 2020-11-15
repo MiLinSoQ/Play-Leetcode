@@ -46,17 +46,20 @@ public class Solution {
 		if (nodeA == null && nodeB == null) return null;
 		if (nodeA == nodeB) return nodeA;
 		
-		if (nodeA == null) {
-			nodeA = headB;
-		} else {
-			nodeA = nodeA.next;
-		}
+		nodeA = (nodeA == null) ? headB : nodeA.next;
+		nodeB = (nodeB == null) ? headA : nodeB.next;
 		
-		if (nodeB == null) {
-			nodeB = headA;
-		} else {
-			nodeB = nodeB.next;
-		}
+		// if (nodeA == null) {
+			// nodeA = headB;
+		// } else {
+			// nodeA = nodeA.next;
+		// }
+		
+		// if (nodeB == null) {
+			// nodeB = headA;
+		// } else {
+			// nodeB = nodeB.next;
+		// }
 		
 		return getIntersectionNode(headA, headB, nodeA, nodeB);
 	}
