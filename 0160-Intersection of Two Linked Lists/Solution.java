@@ -49,18 +49,6 @@ public class Solution {
 		nodeA = (nodeA == null) ? headB : nodeA.next;
 		nodeB = (nodeB == null) ? headA : nodeB.next;
 		
-		// if (nodeA == null) {
-			// nodeA = headB;
-		// } else {
-			// nodeA = nodeA.next;
-		// }
-		
-		// if (nodeB == null) {
-			// nodeB = headA;
-		// } else {
-			// nodeB = nodeB.next;
-		// }
-		
 		return getIntersectionNode(headA, headB, nodeA, nodeB);
 	}
 }
