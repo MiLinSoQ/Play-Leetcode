@@ -1,7 +1,7 @@
 /**
 	Url: https://leetcode.com/problems/design-hashset/
 	Author: MiLinSoQ
-	Time: 2020-11-31
+	Time: 2020-11-30
 	Title: Design HashSet
 	No: 705
 */
