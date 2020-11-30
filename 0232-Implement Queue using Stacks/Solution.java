@@ -98,8 +98,6 @@ class MyQueue {
 		return this.data.isEmpty();
         // return false;
     }
-	
-	
 }
 
  
