@@ -8,7 +8,7 @@
 import java.util.*;
 /**
 	
-	設計一個 Iterator，來走訪 Tree 結構。
+	設計一個 Iterator，來走訪 Binary Search Tree 結構。
 	需要實作以下方法：
 	1. int next()
 	2. boolean hasNext()
