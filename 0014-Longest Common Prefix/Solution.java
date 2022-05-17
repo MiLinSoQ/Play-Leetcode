@@ -8,6 +8,14 @@
 
 import java.util.*;
 
+/**
+	傳入一個 String array (strs)，
+	在 strs 找出共同的前綴字
+	
+	EX: 
+		Input: strs = [ "fleax", "fle" ];
+		Output: "fle"
+*/
 public class Solution {
 	
 	public static void main(String args[]) {
